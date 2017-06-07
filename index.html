@@ -9,7 +9,7 @@
 <body>
 
   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
-
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script type="text/javascript">
     function clicktest() {
       alert("클릭");
@@ -19,288 +19,230 @@
   <style media="screen">
     body {
       padding: 0px;
+      margin: 0px;
     }
 
-    .head {
-      font-family: Agency FB;
-      font-size: 80px;
-      margin: 10px;
+    .top{
+      display: inline-block;
+      width: 100%;
+      height: 200px;
     }
 
-    .wel {
-      font-family: Segoe Script;
-      font-size: 40px;
-    }
-
-    div {
-      display: inline;
-      border: black;
-    }
-
-    .left {
+    .leftside {
+      position: fixed;
+      background-color: 	#01787c;
       float: left;
+      width: 20%;
+      height: 100%;
     }
 
-    .right {
-      float: right;
+    .top div{
+      position: absolute;
+        font-size: 30px;
+        padding: 20px;
     }
 
-    header div p {
-      display: inline;
+    .menu {
+      top: 10px;
+      left: 10px;
     }
 
-    header,
-    footer {
-      background-color: #3B7590;
-      color: white;
+    .searchi{
+      top: 10px;
+      right: 10px;
+    }
+
+    .searchi p{
+      float: left;
+      margin: 0;
+    }
+
+    .searchbox{
+
+    }
+
+    .search{
+      width: 0px;
+    }
+
+    .time{
+      background-color: white;
+      width: 200px;
+      height: 50px;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .useri{
+      border-radius:50px;
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 50px;
       text-align: center;
-      padding: 1em;
-      clear: both;
-      z-index: 1;
     }
 
-    ul li {
-      list-style-type: none;
-      padding: 0px;
+    .useri i {
+      margin-top:22px;
+    }
+
+    .blogname{
+        font-family: Agency FB;
+        font-size: 50px;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+    }
+
+
+        .wel {
+          font-family: Segoe Script;
+          font-size: 40px;
+        }
+
+
+
+
+    footer {
+      text-align: center;
     }
 
     section {
-      margin-left: 170px;
-      margin-right: 170px;
+      margin-left: 20%;
       min-height: 15em;
       padding: 15px;
     }
 
-    .c2 {
-      text-align: center;
+    .sign{
+      float: right;
     }
 
-    body {
-      margin: 0px;
+    .sign p{
+      float: left;
+      margin-left: 10px;
     }
 
-    .menuic {
-      font-size: 50px;
-      margin: 0px;
-    }
-
-
-    p.head {
-      text-align: center;
-    }
-
-    #topMenu {
-      height: 30px;
-      /* 메인 메뉴의 높이 */
-      width: 150px;
-      /* 메인 메뉴의 넓이 */
-    }
-
-    #topMenu ul {
-      /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
-      list-style-type: none;
-      /* 메인 메뉴 안의 ul 내부의 목록 표시를 없애줌 */
-      margin: 0px;
-      /* 메인 메뉴 안의 ul의 margin을 없앰 */
-      padding: 0px;
-      /* 메인 메뉴 안의 ul의 padding을 없앰 */
-    }
-
-    #topMenu ul li {
-      /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
-      color: white;
-      /* 글씨 색을 흰색으로 설정 */
-      background-color: #2d2d2d;
-      /* 배경 색을 RGB(2D2D2D)로 설정 */
-      /* 왼쪽으로 나열되도록 설정 */
-      line-height: 90px;
-      /* 텍스트 한 줄의 높이를 30px로 설정 */
-      vertical-align: middle;
-      /* 세로 정렬을 가운데로 설정 */
-      text-align: center;
-      /* 텍스트를 가운데로 정렬 */
-      position: relative;
-      /* 해당 li 태그 내부의 top/left 포지션 초기화 */
-    }
-
-    .menuLink,
-    .submenuLink {
-      /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
-      text-decoration: none;
-      /* a 태그의 꾸밈 효과 제거 */
-      display: block;
-      /* a 태그의 클릭 범위를 넓힘 */
-      width: 150px;
-      /* 기본 넓이를 150px로 설정 */
-      font-size: 12px;
-      /* 폰트 사이즈를 12px로 설정 */
-      font-weight: bold;
-      /* 폰트를 굵게 설정 */
-      font-family: "Trebuchet MS", Dotum;
-      /* 기본 폰트를 영어/한글 순서대로 설정 */
-    }
-
-    .menuLink {
-      /* 상위 메뉴의 글씨색을 흰색으로 설정 */
-      color: white;
-    }
-
-    .topMenuLi:hover .menuLink {
-      /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
-      color: red;
-      /* 글씨 색 빨간색 */
-      background-color: #4d4d4d;
-      /* 배경색을 밝은 회색으로 설정 */
-    }
-
-    .submenuLink {
-      /* 하위 메뉴의 a 태그 스타일 설정 */
-      color: #2d2d2d;
-      /* 글씨 색을 RGB(2D2D2D)로 설정 */
-      background-color: white;
-      /* 배경색을 흰색으로 설정 */
-      border: solid 1px black;
-      /* 테두리를 설정 */
-      margin-top: -1px;
-      /* 위 칸의 하단 테두리와 아래칸의 상단 테두리가 겹쳐지도록 설덩 */
-    }
-
-    .longLink {
-      /* 좀 더 긴 메뉴 스타일 설정 */
-      width: 190px;
-      /* 넓이는 190px로 설정 */
-    }
-
-    .submenu {
-      /* 하위 메뉴 스타일 설정 */
-      position: absolute;
-      /* html의 flow에 영향을 미치지 않게 absolute 설정 */
-      width: 0px;
-      /* 초기 높이는 0px로 설정 */
-      overflow: hidden;
-      /* 실 내용이 높이보다 커지면 해당 내용 감춤 */
-      transition: width .2s;
-      /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(기본) */
-      /*-webkit-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 크롬/사파라ㅣ) */
-      /*  -moz-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 파폭) */
-      /*  -o-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 오페라) */
-    }
-
-    .topMenuLi:hover .submenu {
-      /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
-      width: 300px;
-      /* 높이를 93px로 설정 */
-    }
-
-    .submenuLink:hover {
-      /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
-      color: red;
-      /* 글씨색을 빨간색으로 설정 */
-      background-color: #dddddd;
-      /* 배경을 RGB(DDDDDD)로 설정 */
-    }
-
-    .menuico {
-      font-size: 60px;
-    }
-
-    .menuico:hover {
-      width: 300px;
-    }
 
     .menulist {
       list-style-type: none;
       overflow: hidden;
-      position: absolute;
-      width: 0px;
-      height: 100%;
-      color: black;
       background-color: white;
-      transition: width .3s;
+      transition: height 1s;
     }
 
-    .left:hover .menulist {
-      border-right: 2px solid black;
-      width: 300px;
-    }
-
-    .menulist {
-      margin-top: -1px;
-      top: 0px;
-      left: 0px;
+    .menu:hover .menulist {
+      height: 150px;
     }
 
     .menulist li {
-      background-color: white;
+      float: left;
+      width: auto;
       text-align: center;
-      height: 100px;
-      border: 1px solid black;
-      vertical-align: middle;
-      font-size: 30px;
+      width: 150px;
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      font-family: 한컴 윤체 B;
+    }
+
+    .menu1 {
+      background-color: #CC3D3D;
+    }
+
+    .menu2 {
+      background-color: #4375DB;
+    }
+
+    .menu3 {
+      background-color: #E5D85C;
+    }
+
+    .menu4 {
+      background-color: #6F30C9;
+    }
+
+    footer {
+      margin-left: 20%;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 50px;
     }
   </style>
 
-  <div class="table">
-    <header>
-      <div class="left">
-        <p class="menuico"><i class="fa fa-bars" aria-hidden="true" onclick="clicktest()"></i></p>
-        <ul class="menulist">
-          <li class="menu">HTML</li>
-          <li class="menu">CSS</li>
-          <li class="menu">JAVASCRIPT</li>
-          <li class="menu">PHP</li>
-        </ul>
+  <nav class="leftside">
+    <div class="top">
+      <div class="menu">
+        <i class="fa fa-bars" aria-hidden="true" onclick="clicktest()"></i>
+        <!--  <ul class="menulist">
+                <li class="menu1">HTML</li>
+                <li class="menu2">CSS</li>
+                <li class="menu3">JAVASCRIPT</li>
+                <li class="menu4">PHP</li>
+              </ul>-->
       </div>
 
-      <div class="right">
-        <p>로그인</p>
-        <p>회원가입</p>
+      <div class="searchi">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <div class="searchbox">
+            <input type="text" class="search" name="search" value="search">
+        </div>
       </div>
 
-      <p class="head">MY CODE</p>
-    </header>
+    </div>
 
+    <div class="center">
+      <p class="blogname">MY CODE</p>
+      <div class="useri">
+          <i class="fa fa-user" aria-hidden="true"></i>
+      </div>
+    </div>
 
-    <section>
-      <article class="c2">
+    <div class="time"></div>
 
-        <p style="font-size: 60px;"><i class="fa fa-file-code-o" aria-hidden="true"></i></p>
-        <p class="wel">WELCOME</p>
-        <a>
-          <p>MY CODE에 오신것을 환영 합니다</p>
-        </a>
-        <p>My Code에서는 무료로 웹을 html, css, javascript, php등을 이용하여 가르쳐 주고 있습니다. </p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </article>
-    </section>
-
-
-    <!--  <article class="code">
-    <pre>
-      <code>
-        &lt;!DOCTYPE html>
-        &lt;html>
-          &lt;head>
-            &lt;meta charset="utf-8">
-            &lt;title>My first html&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-            &lt;h1>Hello html&lt;/h1&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
-      </code>
-    </pre>
-  </article>-->
-
-    <footer>
-      <h2>Copyright &copy; mycode.com</h2>
-    </footer>
-  </div>
+  </nav>
 
 
 
 
 
+
+
+
+  <section>
+    <div class="sign">
+      <p>로그인</p>
+      <p>|</p>
+      <p>회원가입</p>
+    </div>
+    <article class="intro">
+
+
+      <p style="font-size: 60px;"><i class="fa fa-file-code-o" aria-hidden="true"></i></p>
+      <p class="wel">WELCOME</p>
+      <a>
+        <p>MY CODE에 오신것을 환영 합니다</p>
+      </a>
+      <p>My Code에서는 무료로 html, css, javascript, php등을 가르쳐 주고 있습니다. </p>
+    </article>
+  </section>
+
+  <footer>
+    <h2>Copyright &copy; mycode.com</h2>
+  </footer>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    setInterval(function() {
+      var hour=new Date().getHours();
+      var min=new data().getMinutes();
+      $('.time').text(hour.toString()+min.toString());
+    }, 1000);
+  });
+  </script>
 </body>
 
 </html>
